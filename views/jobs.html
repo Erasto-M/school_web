@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technician Jobs</title>
+    <link rel="stylesheet" href="../styles/jobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-tools"></i>
+            <span>Technician Issues</span>
+        </div>
+        <div class="profile">
+            <div class="profile-info">
+                <span>John Doe</span>
+                <small>Technician</small>
+            </div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Technician Job Management</h2>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button id="show-incomplete" class="active">Incomplete Jobs</button>
+            <button id="show-complete">Completed Jobs</button>
+        </div>
+
+        <!-- Job Sections -->
+        <div class="job-sections">
+            <div class="job-section" id="incomplete-jobs">
+                <h3><i class="fas fa-exclamation-circle"></i> Incomplete Jobs</h3>
+                <ul class="job-list" id="incomplete-list">
+                    <!-- Incomplete jobs will be dynamically inserted here -->
+                </ul>
+            </div>
+
+            <div class="job-section hidden" id="complete-jobs">
+                <h3><i class="fas fa-check-circle"></i> Completed Jobs</h3>
+                <ul class="job-list" id="complete-list">
+                    <!-- Completed jobs will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Detail Section -->
+    <div class="job-detail hidden" id="job-detail">
+        <div class="job-detail-content">
+            <h3>Job Details</h3>
+            <div id="job-info"></div>
+            <button id="close-detail" class="close-detail">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Technician Job Management. All rights reserved.</p>
+    </footer>
+
+    <script src="../javascript/jobs.js"></script>
+</body>
+</html>

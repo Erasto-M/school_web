@@ -1,0 +1,360 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the profile to the right */
+}
+
+.profile-info {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.profile-info span {
+    display: block;
+    font-weight: bold;
+}
+
+.profile-info small {
+    color: #f0f4f8;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn i {
+    margin-right: 8px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Toggle Button Styles */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button.active {
+    background-color: #2980b9;
+}
+
+.toggle-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* Job Section */
+.job-section {
+    margin-bottom: 30px;
+}
+
+.job-section h3 {
+    color: #2980b9; /* Blue color for section headings */
+    margin-bottom: 15px;
+}
+
+/* Job List Styles */
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Incomplete Job Styles */
+.incomplete-job {
+    background-color: #ffebee; 
+    color: #a17f7f;
+}
+
+.incomplete-job:hover {
+    background-color: #ffcccc;
+}
+
+/* Completed Job Styles */
+.complete-job {
+    background-color: #e8f5e9; 
+    color: #388e3c; 
+}
+
+.complete-job:hover {
+    background-color: #c8e6c9;
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+button i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Undo button styles */
+.undo-complete {
+    background-color: #e67e22; /* Orange color for undo button */
+}
+
+.undo-complete:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px;
+    height: 200px;
+    background-color: #2980b9;
+    color: white;
+}
+
+footer p {
+    margin-top: 80px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+#job-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#job-detail.hidden {
+    display: none; 
+}
+
+
+#job-detail:not(.hidden) {
+    display: flex; 
+}
+
+.job-detail-content {
+    background: #2980b9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+}
+
+
+.job-detail-content div {
+    margin: 10px 0;
+}
+
+.close-detail {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .toggle-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .toggle-buttons button:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile {
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .job-list li {
+        flex-direction: column; /* Stack items in list vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .job-list li span {
+        margin-bottom: 5px; /* Space between title and buttons */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons */
+    }
+
+    #job-detail {
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+
+    .job-detail-content {
+        padding: 15px; /* Adjust padding inside the detail box */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .close-detail {
+        font-size: 14px; /* Smaller close button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 20px; /* Smaller logo text */
+    }
+
+    .logout-btn {
+        width: 100%; /* Full-width logout button */
+        margin-top: 10px; /* Space above logout button */
+    }
+
+    .toggle-buttons button {
+        font-size: 14px; 
+    }
+
+    .job-list li {
+        padding: 10px; 
+    }
+
+    h2 {
+        font-size: 1.3em; 
+    }
+
+    .job-detail-content {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .job-detail-content div {
+        font-size: 14px; /* Smaller font for details */
+    }
+}
