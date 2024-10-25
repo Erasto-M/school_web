@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Fetch issues from API
 async function fetchIssues() {
   try {
-    const response = await fetch("http://127.0.0.1:3000/all-issues", {
+    const response = await fetch("https://school-web-backend.onrender.com/all-issues", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -150,7 +150,7 @@ function showJobDetail(issue) {
 async function completeJob(jobId) {
   try {
     const response = await fetch(
-      `http://127.0.0.1:3000/complete-issue/${jobId}`,
+      `https://school-web-backend.onrender.com/complete-issue/${jobId}`,
       {
         method: "PUT",
         headers: {
@@ -169,7 +169,7 @@ async function completeJob(jobId) {
 // Undo job
 async function undoJob(jobId) {
   try {
-    const response = await fetch(`http://127.0.0.1:3000/undo-issue/${jobId}`, {
+    const response = await fetch(`https://school-web-backend.onrender.com/undo-issue/${jobId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
